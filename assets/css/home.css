@@ -1293,39 +1293,87 @@
 
 /**************************************************************** Party Hall Section **********************************/
 .party-hall-carousel-section {
-  padding: 60px 40px;
-  background: linear-gradient(to bottom, #20005c, #000);
+  background: url(../images/part-hall-bg.png) no-repeat center center / cover;
+  /* padding: 25px 40px 80px; */
+  position: relative;
+  overflow: hidden;
+  color: #fff;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  padding: 20px;
 }
 
+
+.party-hall-overlay {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.party-title {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+}
+
+.party-title span {
+  color: #8f00ff;
+}
+
+.party-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+}
+
+/* Hall Card */
 .party-hall-carousel .hall-card {
   background: #fff;
-  border-radius: 16px;
-  margin: auto;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
-  padding-bottom: 20px;
-  transition: transform 0.3s;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .party-hall-carousel .hall-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-8px);
 }
 
 .hall-card img {
-  width: 60%;
+  width: 100%;
   height: 250px;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .hall-card h3 {
-  margin: 16px 0 0;
+  color: #6200ff;
+  margin-top: 5px;
   font-size: 22px;
-  color: #5c00c2;
   font-weight: 700;
 }
+
+/* CTA Button */
+.party-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 32px;
+  font-weight: 600;
+  background: #8f00ff;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.party-btn:hover {
+  background: #5f00cc;
+}
+
 
 /* ******************************* LOCATION SECTION *************************** */
 .mochaplay-location-section {

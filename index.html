@@ -235,30 +235,38 @@
         </div>
     </section>
 
-    <!-- party hall -->
+    <!-- PARTY HALL SECTION -->
     <section class="party-hall-carousel-section">
-        <div class="party-hall-carousel">
-            <!-- Card 1 -->
-            <div class="hall-card">
-                <img src="https://via.placeholder.com/400x250?text=Hall+1" alt="Hall 1">
-                <h3>Celebration Hall</h3>
+        <div class="party-hall-overlay">
+            <h2 class="party-title">
+                <span>PARTY</span> HALL
+            </h2>
+            <p class="party-subtitle">A One-Stop Destination Where Thrill Meets Chill</p>
+
+            <div class="party-hall-carousel">
+                <!-- Hall Card 1 -->
+                <div class="hall-card">
+                    <img src="assets/images/party-img1.png" alt="Hall 1" />
+                    <h3>Celebration Hall</h3>
+                </div>
+
+                <!-- Hall Card 2 -->
+                <div class="hall-card">
+                    <img src="assets/images/party-hall.png" alt="Hall 2" />
+                    <h3>Galaxy Banquet</h3>
+                </div>
+
+                <!-- Hall Card 3 -->
+                <div class="hall-card">
+                    <img src="assets/images/party-hall.png" alt="Hall 3" />
+                    <h3>Royal Party Hall</h3>
+                </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="hall-card">
-                <img src="https://via.placeholder.com/400x250?text=Hall+2" alt="Hall 2">
-                <h3>Galaxy Banquet</h3>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="hall-card">
-                <img src="https://via.placeholder.com/400x250?text=Hall+3" alt="Hall 3">
-                <h3>Royal Party Hall</h3>
-            </div>
-
-            <!-- Add More Cards as Needed -->
+            <a href="#" class="party-btn">RESERVE NOW</a>
         </div>
     </section>
+
     <!-- events and parties section -->
     <section class="events-parties-section">
         <div class="events-container">
@@ -454,17 +462,21 @@
                 arrows: true,
                 dots: false,
                 infinite: true,
+                centerMode: true,
+                centerPadding: '40px',
                 responsive: [
                     {
                         breakpoint: 1024,
                         settings: {
-                            slidesToShow: 2
+                            slidesToShow: 2,
+                            centerPadding: '30px',
                         }
                     },
                     {
-                        breakpoint: 600,
+                        breakpoint: 768,
                         settings: {
-                            slidesToShow: 1
+                            slidesToShow: 1,
+                            centerPadding: '20px',
                         }
                     }
                 ]
