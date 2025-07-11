@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Three .js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- global css -->
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <!-- Home css -->
+    <link rel="stylesheet" href="./assets/css/home.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/website-logo.svg" alt="Logo">
+        </div>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">CAFE</a>
+            <a href="#">GAMEING ZONE</a>
+            <a href="#">MOVIE</a>
+            <a href="#">EVENT & PARTIES</a>
+            <a href="#">CONTACT</a>
+        </nav>
+        <button class="btn-reserve">RESERVE NOW</button>
+    </header>
+
+    <section class="hero">
+        <h1><span class="highlight">ENTER</span>. EXPLORE. ENJOY.<br>
+            EVERYTHING YOUTH LOVE <br> UNDER ONE ROOF</h1>
+        <p class="subtext">UNWIND, HANGOUT, AND CREATE MOMENTS THAT MATTER.</p>
+
+        <div class="vertical-divider"></div>
+        <div class="hero-buttons">
+            <button class="btn-primary">GET STARTED</button>
+            <button class="btn-secondary">SCROLL TO DISCOVER</button>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-icon game-icon">
+            <img src="assets/images/game-icon.svg" alt="Game Controller">
+        </div>
+        <div class="floating-icon coffee-icon">
+            <img src="assets/images/coffee-icon.svg" alt="Coffee">
+        </div>
+        <div class="floating-icon ticket-icon">
+            <img src="assets/images/popcorn-icon.svg" alt="Ticket">
+        </div>
+
+        <!-- 3D Canvas for Enhanced Cube -->
+        <div id="three-cube-left" class="cube-left"></div>
+        <div id="three-cube-right" class="cube-right"></div>
+    </section>
+    <!-- About Us Section -->
+    <section class="section-about-bg">
+        <div class="flying-arrow">
+            <div class="arrow-rotator">
+                <img src="assets/images/black-arroe-shine.svg" alt="Flying Arrow" />
+            </div>
+        </div>
+        <!-- About Container -->
+        <div class="about-container">
+            <!-- Left Content -->
+            <div class="about-left">
+                <!-- Title & Strip -->
+                <div class="about-title-strip">
+                    <h2>ABOUT US</h2>
+                    <div class="strip-images">
+                        <img src="assets/images/sharp-about-img.png" alt="Decorative Strip">
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <p class="about-desc">
+                    A One-Stop Destination Where Thrill Meets Chill — <br />
+                    From The Big Screen To Bite-Sized Treats And <br />
+                    Gaming Heat.
+                </p>
+
+                <!-- Info Cards -->
+                <div class="about-cards">
+                    <!-- Card 1 -->
+                    <div class="card card-purple">
+                        <div class="card-img-wrap">
+                            <img src="assets/images/card1-about-img.png" alt="Cafe Image">
+                            <div class="arrow">↗</div>
+                        </div>
+                        <div class="subtext">Unwind, Hangout, And Create<br>Moments That Matter.</div>
+                        <div class="title">CAFÉ</div>
+                    </div>
+
+                    <!-- Column containing Game Zone + Party Hall -->
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <!-- Card 2 -->
+                        <div class="card card-yellow">
+                            <div class="arrow">↗</div>
+                            <div class="subtext">Unwind, Hangout, And Create<br>Moments That Matter.</div>
+                            <div class="title">GAME ZONE</div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="card card-white">
+                            <div class="arrow">↗</div>
+                            <div class="subtext">Unwind, Hangout, And Create<br>Moments That Matter.</div>
+                            <div class="title">PARTY HALL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="about-right">
+                <img src="assets/images/neon-about-img.png" alt="Neon Room Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- CAFE VIBES -->
+    <section class="cafe-vibes-section">
+        <canvas id="cafeCanvas"></canvas>
+        <img src="assets/images/coffee-cups.svg" alt="Coffee Cup" class="icon cup-icon" />
+        <img src="assets/images/cool-drink-cup.svg" alt="Shake Icon" class="icon shake-icon" />
+
+        <div class="cafe-grid">
+            <div class="img-wrapper rotate-left">
+                <img src="assets/images/cafe-img1.png" alt="Cafe 1" />
+            </div>
+            <div class="img-wrapper rotate-right">
+                <img src="assets/images/cafe-img2.png" alt="Cafe 2" />
+            </div>
+
+            <div class="content">
+                <!-- <img src="assets/images/OBJECTS.png" class="arrow" alt="Arrow" /> -->
+                <h2 class="title">CAFE VIBES</h2>
+                <p class="desc">
+                    A One-Stop Destination Where Thrill Meets Chill —<br />
+                    From The Big Screen To Bite-Sized Treats And Gaming Heat.
+                </p>
+                <button class="reserve-btn">RESERVE NOW</button>
+            </div>
+
+            <div class="img-wrapper rotate-left">
+                <img src="assets/images/cafe-img3.png" alt="Cafe 3" />
+            </div>
+            <div class="img-wrapper rotate-right">
+                <img src="assets/images/cafe-img4.png" alt="Cafe 4" />
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME ZONE SECTION -->
+    <section class="gamezone-wrapper">
+        <!-- 3D Arrows -->
+        <div id="arrow-left" class="arrow-3d left-arrow"></div>
+        <div id="arrow-right" class="arrow-3d right-arrow"></div>
+
+
+        <div class="gamezone-grid-bg"></div>
+        <div class="gamezone-content">
+            <h2 class="gamezone-title">
+                <span class="highlight-green">GAME</span> ZONE
+            </h2>
+            <p class="gamezone-subtitle">
+                A One-Stop Destination Where Thrill Meets Chill
+            </p>
+
+            <div class="gamezone-carousel">
+                <!-- card 1 -->
+                <div class="gamezone-card">
+                    <div class="gamezone-image">
+                        <img src="assets/images/friends-img1.png" alt="Box Cricket">
+                    </div>
+                    <div class="gamezone-caption">
+                        <h3 class="gamezone-heading">BOX CRICKET</h3>
+                        <p class="gamezone-subtext">
+                            A One-Stop Destination Where Thrill Meets Chill — From The Big Screen To Bite-Sized Treats
+                            And Gaming Heat.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="gamezone-card">
+                    <div class="gamezone-image">
+                        <img src="assets/images/cheering-img.png" alt="PS Games">
+                    </div>
+                    <div class="gamezone-caption">
+                        <h3 class="gamezone-heading">PS GAMES</h3>
+                        <p class="gamezone-subtext">
+                            Compete in PS4 & PS5 Multiplayer Matches. Feel the Rush of Virtual Arenas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="gamezone-card">
+                    <div class="gamezone-image">
+                        <img src="assets/images/party-img1.png" alt="VR Experience">
+                    </div>
+                    <div class="gamezone-caption">
+                        <h3 class="gamezone-heading">VR EXPERIENCE</h3>
+                        <p class="gamezone-subtext">
+                            Dive Into Adventure with Cutting-Edge VR Worlds That Feel Incredibly Real.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card 4 -->
+                <div class="gamezone-card">
+                    <div class="gamezone-image">
+                        <img src="assets/images/card1-about-img.png" alt="Arcade Madness">
+                    </div>
+                    <div class="gamezone-caption">
+                        <h3 class="gamezone-heading">ARCADE MADNESS</h3>
+                        <p class="gamezone-subtext">
+                            Classic Fun Reimagined! Buttons, Blasters, and Bragging Rights Await.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gamezone-actions">
+                <a href="#" class="btn-register">REGISTER NOW</a>
+                <a href="#" class="btn-explore">EXPLORE ALL</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- party hall -->
+    <section class="party-hall-carousel-section">
+        <div class="party-hall-carousel">
+            <!-- Card 1 -->
+            <div class="hall-card">
+                <img src="https://via.placeholder.com/400x250?text=Hall+1" alt="Hall 1">
+                <h3>Celebration Hall</h3>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="hall-card">
+                <img src="https://via.placeholder.com/400x250?text=Hall+2" alt="Hall 2">
+                <h3>Galaxy Banquet</h3>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="hall-card">
+                <img src="https://via.placeholder.com/400x250?text=Hall+3" alt="Hall 3">
+                <h3>Royal Party Hall</h3>
+            </div>
+
+            <!-- Add More Cards as Needed -->
+        </div>
+    </section>
+    <!-- events and parties section -->
+    <section class="events-parties-section">
+        <div class="events-container">
+
+            <!-- Left Column Images -->
+            <div class="events-images-left">
+                <img src="assets/images/event-img1.png" alt="Event 1" class="events-img img-lg">
+                <div class="events-row">
+                    <img src="assets/images/friends-img1.png" alt="Event 2" class="events-img img-sm">
+                    <img src="assets/images/cheering-img.png" alt="Event 3" class="events-img img-sm">
+                </div>
+            </div>
+
+            <!-- Center Text Content -->
+            <div class="events-content">
+                <p class="events-tagline">
+                    A One-Stop Destination Where Thrill Meets Chill — From The Big Screen To Bite-Sized Treats And
+                    Gaming Heat.
+                </p>
+
+                <h2 class="events-heading">
+                    <span class="highlight">EVENT</span><br>
+                    <span class="highlight">&</span><br>
+                    <span class="highlight">PARTIES</span>
+                </h2>
+
+                <a href="#" class="reserve-button">RESERVE NOW</a>
+
+                <!-- Dummy Arrows -->
+                <img src="assets/images/white-diamond.png" class="arrow arrow-left" alt="Arrow">
+                <img src="assets/images/white-diamond.png" class="arrow arrow-right" alt="Arrow">
+            </div>
+
+            <!-- Right Column Images -->
+            <div class="events-images-right">
+                <img src="assets/images/party-img1.png" alt="Event 4" class="events-img img-lg">
+                <div class="events-row">
+                    <img src="assets/images/party-hall.png" alt="Event 5" class="events-img img-sm">
+                    <img src="assets/images/cake-cutting.png" alt="Event 6" class="events-img img-sm">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- OFFER SECTION -->
+    <section class="membership-offer-section">
+        <div class="membership-container">
+
+            <!-- Left 3D Arrow -->
+            <div class="membership-arrow">
+                <img src="assets/images/OBJECTS.png" alt="Diamond Arrow" />
+            </div>
+
+            <!-- Text Content -->
+            <div class="membership-content">
+                <h4 class="membership-subheading">CELEBRATION</h4>
+                <h2 class="membership-heading">
+                    <span class="bold-text">Membership</span>
+                    <span class="light-text">Offer</span>
+                </h2>
+                <p class="membership-desc">
+                    A One-Stop Destination Where Thrill Meets Chill — From The Big Screen To Bite-Sized Treats And
+                    Gaming Heat.
+                </p>
+                <div class="membership-buttons">
+                    <a href="#" class="btn btn-yellow">ADD MEMBERSHIP</a>
+                    <a href="#" class="btn btn-purple">RESERVE NOW</a>
+                </div>
+            </div>
+
+            <!-- Visuals Section -->
+            <div class="membership-visuals">
+                <div class="offer-stack">
+                    <!-- Left Offer Bar (Food) -->
+                    <div class="offer-bar-wrapper">
+                        <img src="assets/images/offer-bar.png" alt="30% Off Food" class="offer-bar stretched" />
+                        <div class="offer-label">
+                            <strong>30%</strong><br />OFF ON FOOD
+                        </div>
+                        <img src="assets/images/coffee-cup-nuts.png" alt="Coffee Cup" class="snack-img coffee" />
+                    </div>
+
+                    <!-- Right Offer Bar (Movie) -->
+                    <div class="offer-bar-wrapper">
+                        <img src="assets/images/offer-bar.png" alt="40% Off Movie" class="offer-bar stretched" />
+                        <div class="offer-label">
+                            <strong>40%</strong><br />OFF ON MOVIE<br />TICKET
+                        </div>
+                        <img src="assets/images/specs-popcorn.png" alt="Popcorn Bucket" class="snack-img popcorn" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Background Curve Trail -->
+        <div class="curve-bg"></div>
+    </section>
+    <!-- LOCATION SECTIONS -->
+    <section class="mochaplay-location-section">
+        <img src="assets/images/white-diamond.png" alt="Left Icon" class="triangle-icon left" />
+        <div class="location-content">
+            <h4 class="location-subheading">Closer than you think</h4>
+            <h2 class="location-heading">
+                Mochaplay are located<br>
+                near Hyderabad with easy<br>
+                <span class="highlight">access by road.</span>
+            </h2>
+            <div class="highlight-underline"></div>
+        </div>
+        <img src="assets/images/white-diamond.png" alt="Right Icon" class="triangle-icon right" />
+    </section>
+    <!-- Footer -->
+    <footer class="east-hug-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="assets/images/website-logo.svg" alt="East Hug Logo" />
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <!-- Left Column -->
+            <div class="footer-left">
+                <div class="footer-block">
+                    <img src="assets/images/location-logo.svg" alt="Location Icon" />
+                    <p>XYZ</p>
+                </div>
+
+                <div class="footer-block">
+                    <img src="assets/images/mail-logo.svg" alt="Email Icon" />
+                    <p>XYZ@Gmail.Com</p>
+                </div>
+
+                <div class="footer-block">
+                    <img src="assets/images/call-logo.svg" alt="Phone Icon" />
+                    <p>+385 20 300 300 | +385 20 300 300</p>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="footer-right">
+                <h3>GET THE LATEST NEWS UPDATES<br />ABOUT EAST HUG</h3>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="name@gmail.com" />
+                    <button class="subscribe-btn">SUBSCRIPTION</button>
+                </div>
+
+                <div class="social-links">
+                    <p>Social Media Link</p>
+                    <div class="icons">
+                        <img src="assets/images/facebook.png" alt="Facebook" />
+                        <img src="assets/images/instagram.png" alt="Instagram" />
+                        <img src="assets/images/twitter.png" alt="X/Twitter" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="left">Mochaplay@2025 All Rights Reserved</p>
+            <p class="right">Design & Development by Reymould</p>
+        </div>
+    </footer>
+    <!-- Slick Carousel JS (include these at the end of your body) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.gamezone-carousel').slick({
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 3,
+            arrows: true,
+            dots: true,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: true,
+                        centerPadding: '0px'
+                    }
+                }
+            ]
+        });
+    </script>
+    <!-- PARTY HALL -->
+    <script>
+        $(document).ready(function () {
+            $('.party-hall-carousel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script type="module" src="./assets/JS-animations/JS-animations/about-section-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>grata
+    <script src="assets/JS-animations/JS-animations/home.js"></script>
+
+</body>
+
+</html>
