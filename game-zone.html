@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="./assets/css/global.css" />
     <!-- Game zone css -->
     <link rel="stylesheet" href="./assets/css/game-zone.css" />
+    <!-- Game zone mobile css -->
+    <link rel="stylesheet" href="./assets/css/game-zone-mobile.css" media="(max-width: 768px)" />
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
@@ -39,7 +43,7 @@
     </header>
 
     <!-- HTML -->
-    <section class="gamezone-hero">
+    <section class="gamezone-hero" data-aos="fade-up" data-aos-duration="1200">
         <div class="gamezone-overlay">
             <h1 class="gamezone-title">GAMEING ZONE</h1>
             <p class="gamezone-subtitle">
@@ -48,7 +52,7 @@
         </div>
     </section>
     <!-- Out door games -->
-    <section class="gamezone-about-section">
+    <section class="gamezone-about-section" data-aos="fade-up" data-aos-duration="1200">
         <div class="about-text">
             <h2>About Game Zone</h2>
             <p>
@@ -198,7 +202,7 @@
     </section>
     <!-- Offer section -->
     <!-- OFFER SECTION -->
-    <section class="membership-offer-section">
+    <section class="membership-offer-section" data-aos="fade-up" data-aos-duration="1200">
         <div class="membership-container">
 
             <!-- Left 3D Arrow -->
@@ -252,7 +256,7 @@
     </section>
 
     <!-- LOCATION SECTIONS -->
-    <section class="mochaplay-location-section">
+    <section class="mochaplay-location-section" data-aos="fade-up" data-aos-duration="1200">
         <img src="assets/images/white-diamond.png" alt="Left Icon" class="triangle-icon left" />
         <div class="location-content">
             <h4 class="location-subheading">Closer than you think</h4>
@@ -268,8 +272,10 @@
     <!-- Slick Carousel JS (include these at the end of your body) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.video-carousel').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -280,14 +286,16 @@
                 appendDots: $('.dots-container'),
                 prevArrow: $('.custom-prev'),
                 nextArrow: $('.custom-next'),
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
                     }
-                ]
+                }]
+            });
+            // Initialize AOS
+            AOS.init({
+                once: true
             });
         });
     </script>

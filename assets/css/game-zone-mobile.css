@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .gamezone-title {
+        font-size: 2rem;
+    }
+
+    .gamezone-subtitle {
+        font-size: 1rem;
+    }
+
+    .gamezone-hero {
+        height: 60vh;
+        padding: 1rem;
+    }
+
+    .gamezone-about-section {
+        margin-top: 60vh;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    /* Add more mobile-specific styles as needed for other sections */
+}
