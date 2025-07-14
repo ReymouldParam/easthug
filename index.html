@@ -22,19 +22,29 @@
 
 <body>
     <header>
-        <div class="logo">
-            <img src="assets/images/website-logo.svg" alt="Logo">
+        <div class="header-top">
+            <div class="logo">
+                <img src="assets/images/website-logo.svg" alt="Logo" />
+            </div>
+            <button id="navToggle" class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <nav>
+
+        <nav id="mainNav" class="mobile-nav">
             <a href="#">HOME</a>
             <a href="#">CAFE</a>
-            <a href="#">GAMEING ZONE</a>
+            <a href="#">GAME ZONE</a>
             <a href="#">MOVIE</a>
             <a href="#">EVENT & PARTIES</a>
             <a href="#">CONTACT</a>
+            <button class="btn-reserve">RESERVE NOW</button>
         </nav>
-        <button class="btn-reserve">RESERVE NOW</button>
     </header>
+
+
 
     <section class="hero">
         <h1><span class="highlight">ENTER</span>. EXPLORE. ENJOY.<br>
@@ -44,7 +54,7 @@
         <div class="vertical-divider"></div>
         <div class="hero-buttons">
             <button class="btn-primary">GET STARTED</button>
-            <button class="btn-secondary">SCROLL TO DISCOVER</button>
+            <button class="btn-secondary">DISCOVER</button>
         </div>
 
         <!-- Floating Elements -->
@@ -395,15 +405,21 @@
                     <img src="assets/images/location-logo.svg" alt="Location Icon" />
                     <p>XYZ</p>
                 </div>
-
                 <div class="footer-block">
                     <img src="assets/images/mail-logo.svg" alt="Email Icon" />
                     <p>XYZ@Gmail.Com</p>
                 </div>
-
                 <div class="footer-block">
                     <img src="assets/images/call-logo.svg" alt="Phone Icon" />
                     <p>+385 20 300 300 | +385 20 300 300</p>
+                </div>
+                <div class="social-links">
+                    <p>Social Media Link</p>
+                    <div class="icons">
+                        <img src="assets/images/facebook.png" alt="Facebook" />
+                        <img src="assets/images/instagram.png" alt="Instagram" />
+                        <img src="assets/images/twitter.png" alt="X/Twitter" />
+                    </div>
                 </div>
             </div>
 
@@ -413,15 +429,6 @@
                 <div class="subscribe-box">
                     <input type="email" placeholder="name@gmail.com" />
                     <button class="subscribe-btn">SUBSCRIPTION</button>
-                </div>
-
-                <div class="social-links">
-                    <p>Social Media Link</p>
-                    <div class="icons">
-                        <img src="assets/images/facebook.png" alt="Facebook" />
-                        <img src="assets/images/instagram.png" alt="Instagram" />
-                        <img src="assets/images/twitter.png" alt="X/Twitter" />
-                    </div>
                 </div>
             </div>
         </div>
@@ -466,7 +473,6 @@
             });
         });
     </script>
-
     <!-- PARTY HALL -->
     <script>
         $(document).ready(function() {
@@ -506,8 +512,10 @@
     </script>
     <script type="module" src="./assets/JS-animations/JS-animations/about-section-animation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>grata
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="assets/JS-animations/JS-animations/home.js"></script>
+    <!-- header toggler navbar -->
+    <script src="./assets/JS-animations/JS-animations/Header.js"></script>
 
 </body>
 
