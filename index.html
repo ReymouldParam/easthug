@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./assets/css/global.css" />
     <!-- Home css -->
     <link rel="stylesheet" href="./assets/css/home.css" />
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
 </head>
 
 <body>
@@ -139,7 +141,7 @@
             </div>
 
             <div class="content">
-                <!-- <img src="assets/images/OBJECTS.png" class="arrow" alt="Arrow" /> -->
+
                 <h2 class="title">CAFE VIBES</h2>
                 <p class="desc">
                     A One-Stop Destination Where Thrill Meets Chill —<br />
@@ -244,19 +246,19 @@
             <p class="party-subtitle">A One-Stop Destination Where Thrill Meets Chill</p>
 
             <div class="party-hall-carousel">
-                <!-- Hall Card 1 -->
+
                 <div class="hall-card">
                     <img src="assets/images/party-img1.png" alt="Hall 1" />
                     <h3>Celebration Hall</h3>
                 </div>
 
-                <!-- Hall Card 2 -->
+
                 <div class="hall-card">
                     <img src="assets/images/party-hall.png" alt="Hall 2" />
                     <h3>Galaxy Banquet</h3>
                 </div>
 
-                <!-- Hall Card 3 -->
+
                 <div class="hall-card">
                     <img src="assets/images/party-hall.png" alt="Hall 3" />
                     <h3>Royal Party Hall</h3>
@@ -433,39 +435,50 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        $('.gamezone-carousel').slick({
-            centerMode: true,
-            centerPadding: '0px',
-            slidesToShow: 3,
-            arrows: true,
-            dots: true,
-            autoplay: false,
-            autoplaySpeed: 3000,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: true,
-                        centerPadding: '0px'
+        $(document).ready(function() {
+            $('.gamezone-carousel').slick({
+                slidesToShow: 3, // Keep this for desktop
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: '0px',
+                arrows: true,
+                dots: true,
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            centerMode: true,
+                            centerPadding: '30px',
+                            arrows: true,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            centerMode: false,
+                            /* IMPORTANT for mobile */
+                            centerPadding: '0px',
+                            arrows: false
+                        }
                     }
-                }
-            ]
+                ]
+            });
         });
     </script>
+
     <!-- PARTY HALL -->
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.party-hall-carousel').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: true,
-                dots: false,
+                dots: true,
                 infinite: true,
                 centerMode: true,
                 centerPadding: '40px',
-                responsive: [
-                    {
+                responsive: [{
                         breakpoint: 1024,
                         settings: {
                             slidesToShow: 2,
@@ -477,6 +490,14 @@
                         settings: {
                             slidesToShow: 1,
                             centerPadding: '20px',
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            centerMode: false,
+                            centerPadding: '0px',
                         }
                     }
                 ]

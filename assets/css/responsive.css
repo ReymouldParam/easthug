@@ -1,0 +1,432 @@
+/* =================== HERO SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+    .hero {
+        padding: 40px 20px;
+        height: auto;
+        background-size: 300% 300%;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.4;
+        margin-top: 20px;
+    }
+
+    .hero h1 span.highlight {
+        display: inline-block;
+        padding: 0 6px;
+        font-size: inherit;
+    }
+
+    .hero p.subtext {
+        font-size: 1rem;
+        margin-top: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .vertical-divider {
+        height: 60px;
+        margin: 16px 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.95rem;
+        border-radius: 8px;
+    }
+
+    .floating-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .floating-icon img {
+        width: 100%;
+        height: auto;
+    }
+
+    .game-icon {
+        top: 10%;
+        left: 2%;
+    }
+
+    .coffee-icon {
+        top: 6%;
+        right: 4%;
+    }
+
+    .ticket-icon {
+        bottom: 40%;
+        right: 6%;
+    }
+
+    .cube-left {
+        display: none;
+        /* Optional: Hide 3D cubes if they overlap content */
+    }
+}
+
+/* =================== ABOUT US SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        padding: 12px 2vw;
+        gap: 14px;
+        max-width: 100vw;
+    }
+
+    .about-left h2 {
+        font-size: 1.1rem;
+    }
+
+    .about-left p.about-desc {
+        font-size: 0.95rem;
+    }
+
+    .strip-images img {
+        width: 100%;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .about-right img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* =================== CAFE VIBES SECTION (Mobile Optimized) =================== */
+@media (max-width: 600px) {
+    .cafe-vibes-section {
+        padding: 40px 0;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cafe-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 4vw;
+    }
+
+    .img-wrapper {
+        width: 90vw;
+        max-width: 90vw;
+        transform: none !important;
+        animation: floatWobble 6s ease-in-out infinite;
+    }
+
+    .content {
+        text-align: center;
+        max-width: 95vw;
+        padding: 0;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+
+    .desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .reserve-btn {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+
+    .cup-icon,
+    .shake-icon {
+        display: none;
+        /* Hide background floating icons on mobile */
+    }
+}
+
+/* =================== GAME ZONE SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .gamezone-wrapper {
+        padding: 30px 10px;
+        background-size: 40px 40px, 40px 40px, cover, cover;
+    }
+
+    .gamezone-content {
+        padding: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .gamezone-title {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .gamezone-subtitle {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .gamezone-carousel {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slick-slider,
+    .slick-list,
+    .slick-track {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow: visible !important;
+    }
+
+    .slick-track {
+        display: flex !important;
+        align-items: stretch;
+        margin-left: 0 !important;
+    }
+
+    .slick-slide {
+        width: 100% !important;
+        min-width: 100% !important;
+        display: flex !important;
+        justify-content: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+
+    .gamezone-card {
+        width: 100% !important;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 8px;
+    }
+
+    .gamezone-image {
+        height: 200px !important;
+        margin-top: 0;
+        border-radius: 8px;
+    }
+
+    .gamezone-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid #D1FF16;
+    }
+
+    .gamezone-heading {
+        font-size: 1rem;
+        margin: 10px 0 4px;
+        padding: 0 10px;
+    }
+
+    .gamezone-subtext {
+        font-size: 0.9rem;
+        padding: 0 10px 12px;
+        color: #444;
+        line-height: 1.5;
+    }
+
+    .gamezone-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 18px;
+        padding: 0 10px;
+    }
+
+    .btn-register,
+    .btn-explore {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+}
+
+
+/* =================== PARTY HALL SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+
+    /* === PARTY HALL SECTION MOBILE STYLES === */
+    .party-hall-carousel-section {
+        padding: 30px 10px;
+        background: linear-gradient(135deg, #D1FF16, #7800E2);
+    }
+
+    .party-title {
+        font-size: 1.6rem;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .party-subtitle {
+        font-size: 0.95rem;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
+    .party-hall-carousel {
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+        padding-left: 10px;
+    }
+
+    .party-hall-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hall-card {
+        flex: 0 0 80%;
+        max-width: 80%;
+        scroll-snap-align: center;
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .hall-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    .hall-card h3 {
+        font-size: 1rem;
+        padding: 10px 12px;
+        margin: 0;
+        color: #000;
+    }
+
+    .party-btn {
+        display: block;
+        margin: 30px auto 0;
+        padding: 12px 24px;
+        background: #D1FF16;
+        color: #000;
+        font-weight: 700;
+        border-radius: 30px;
+        text-align: center;
+        max-width: 240px;
+        font-size: 0.95rem;
+        text-decoration: none;
+    }
+}
+
+/* =================== EVENTS & PARTIES SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+    .events-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 2vw;
+    }
+
+    .events-content {
+        padding: 0 2vw;
+    }
+
+    .events-heading {
+        font-size: 1.1rem;
+    }
+
+    .img-lg {
+        height: 110px;
+    }
+
+    .img-sm {
+        height: 60px;
+    }
+}
+
+/* =================== MEMBERSHIP OFFER SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+    .membership-container {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 2vw;
+    }
+
+    .membership-content {
+        max-width: 100%;
+    }
+
+    .membership-visuals {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .offer-stack {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .offer-bar.stretched {
+        width: 90vw;
+        max-width: 180px;
+        height: 110px;
+    }
+
+    .snack-img {
+        width: 60px;
+    }
+}
+
+/* =================== LOCATION SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+    .mochaplay-location-section {
+        padding: 10px 2vw;
+    }
+
+    .location-heading {
+        font-size: 1.1rem;
+    }
+
+    .triangle-icon {
+        width: 60px;
+    }
+}
