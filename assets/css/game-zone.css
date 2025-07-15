@@ -1,23 +1,6 @@
-/* CSS */
-.gamezone-hero {
-    background-image: url('../images/game-zone-bg.png');
-    /* Replace with your path */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 /* Parallax sticky hero effect */
 .gamezone-hero {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 70vh;
     z-index: 1;
