@@ -13,7 +13,7 @@
     }
 
     .gamezone-about-section {
-        margin-top: 60vh;
+        margin-top: 0vh;
     }
 
     .section-heading {
@@ -22,6 +22,10 @@
 
     .about-text p {
         font-size: 1rem;
+    }
+
+    .location-heading {
+        font-size: 20px;
     }
 
     /* Add more mobile-specific styles as needed for other sections */
