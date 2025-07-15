@@ -1,39 +1,40 @@
-/* Parallax sticky hero effect */
 .gamezone-hero {
     position: fixed;
-    width: 100vw;
-    height: 70vh;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    /* full screen height */
     background-image: url('../images/game-zone-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    background-attachment: fixed;
+    /* optional */
+    z-index: -1;
+    /* send it behind all scrolling content */
 }
 
-/* Ensure overlay covers the hero section */
-.gamezone-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 3rem;
-    border-radius: 8px;
+.gamezone-content {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    /* push content below full-height hero */
+    background: white;
+    /* optional if you want clear background */
 }
 
-.gamezone-title {
-    font-size: 3rem;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
+.parallax-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+    pointer-events: none;
 }
 
-.gamezone-subtitle {
-    font-size: 1.25rem;
-    color: white;
-    font-weight: 400;
-}
+
 
 /***************************************************** Out door games  *****************************************/
 /* Base section */
