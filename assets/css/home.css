@@ -861,7 +861,7 @@
 }
 
 .btn-register:hover {
-    background: #c6eb00;
+    background: #D1FF16;
 }
 
 .btn-explore {
@@ -1279,7 +1279,7 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    padding: 20px;
+    padding: 8px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1297,7 +1297,7 @@
 .hall-card h3 {
     color: #6200ff;
     margin-top: 5px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -1326,7 +1326,7 @@
     background: linear-gradient(135deg, #D1FF16 0%, #000000 40%, #7800E2 100%);
     background-size: 200% 200%;
     background-position: 0% 0%;
-    padding: 40px 60px;
+    padding: 60px 60px;
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -1352,7 +1352,7 @@
 }
 
 .location-heading .highlight {
-    color: #d6ff3c;
+    color: #D1FF16;
     font-weight: 700;
     display: inline-block;
     position: relative;
@@ -1361,7 +1361,7 @@
 .highlight-underline {
     width: 250px;
     height: 4px;
-    background-color: #d6ff3c;
+    background-color: #D1FF16;
     margin: 20px auto 0;
 }
 

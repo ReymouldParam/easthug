@@ -1,28 +1,3 @@
-.gamezone-hero {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80vh;
-    /* full screen height */
-    background-image: url('../images/game-zone-bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    /* optional */
-    z-index: -1;
-    /* send it behind all scrolling content */
-}
-
-.gamezone-content {
-    position: relative;
-    z-index: 1;
-    margin-top: auto;
-    /* push content below full-height hero */
-    background: white;
-    /* optional if you want clear background */
-}
 
 .parallax-bg::after {
     content: "";
@@ -53,6 +28,7 @@
     z-index: 1;
     margin-top: auto;
     background: white;
+    overflow-x: hidden;
 }
 
 .parallax-bg::after {

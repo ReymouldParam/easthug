@@ -388,50 +388,60 @@
         </div>
         <img src="assets/images/white-diamond.png" alt="Right Icon" class="triangle-icon right" />
     </section>
-    <!-- Footer -->
+
     <footer class="east-hug-footer">
-        <div class="footer-top">
-            <div class="footer-logo">
+        <!-- Top Purple Bar -->
+        <div class="footer-top-border"></div>
+
+        <!-- Logo with Side Purple Bars -->
+        <div class="footer-logo-bar">
+            <div class="side-line"></div>
+            <div class="logo-container">
                 <img src="assets/images/website-logo.svg" alt="East Hug Logo" />
             </div>
+            <div class="side-line"></div>
         </div>
 
-        <div class="footer-main">
-            <!-- Left Column -->
-            <div class="footer-left">
-                <div class="footer-block">
+        <!-- Main Grid Content -->
+        <div class="footer-main-grid">
+            <!-- Column 1: Location -->
+            <div class="footer-cell cell-border">
+                <div class="footer-item">
                     <img src="assets/images/location-logo.svg" alt="Location Icon" />
                     <p>XYZ</p>
                 </div>
-                <div class="footer-block">
-                    <img src="assets/images/mail-logo.svg" alt="Email Icon" />
+            </div>
+
+            <!-- Column 2: Email, Divider, Phone -->
+            <div class="footer-cell cell-border">
+                <div class="footer-item">
+                    <img src="assets/images/mail-logo.svg" alt="Mail Icon" />
                     <p>XYZ@Gmail.Com</p>
                 </div>
-                <div class="footer-block">
+                <div class="footer-divider"></div>
+                <div class="footer-item">
                     <img src="assets/images/call-logo.svg" alt="Phone Icon" />
                     <p>+385 20 300 300 | +385 20 300 300</p>
                 </div>
-                <div class="social-links">
-                    <p>Social Media Link</p>
-                    <div class="icons">
-                        <img src="assets/images/facebook.png" alt="Facebook" />
-                        <img src="assets/images/instagram.png" alt="Instagram" />
-                        <img src="assets/images/twitter.png" alt="X/Twitter" />
-                    </div>
-                </div>
             </div>
 
-            <!-- Right Column -->
-            <div class="footer-right">
-                <h3>GET THE LATEST NEWS UPDATES<br />ABOUT EAST HUG</h3>
-                <div class="subscribe-box">
+            <!-- Column 3: Subscribe, Divider, Social -->
+            <div class="footer-cell">
+                <div class="subscribe-row">
                     <input type="email" placeholder="name@gmail.com" />
                     <button class="subscribe-btn">SUBSCRIPTION</button>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-social-icons">
+                    <img src="assets/images/facebook.png" alt="Facebook" />
+                    <img src="assets/images/instagram.png" alt="Instagram" />
+                    <img src="assets/images/twitter.png" alt="Twitter" />
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
             <p class="left">Mochaplay@2025 All Rights Reserved</p>
             <p class="right">Design & Development by Reymould</p>
         </div>
@@ -440,7 +450,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.gamezone-carousel').slick({
                 slidesToShow: 3, // Keep this for desktop
                 slidesToScroll: 1,
@@ -449,31 +459,31 @@
                 arrows: true,
                 dots: true,
                 responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2,
-                            centerMode: true,
-                            centerPadding: '30px',
-                            arrows: true,
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            centerMode: false,
-                            /* IMPORTANT for mobile */
-                            centerPadding: '0px',
-                            arrows: false
-                        }
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        centerMode: true,
+                        centerPadding: '30px',
+                        arrows: true,
                     }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: false,
+                        /* IMPORTANT for mobile */
+                        centerPadding: '0px',
+                        arrows: false
+                    }
+                }
                 ]
             });
         });
     </script>
     <!-- PARTY HALL -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.party-hall-carousel').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -483,27 +493,27 @@
                 centerMode: true,
                 centerPadding: '40px',
                 responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2,
-                            centerPadding: '30px',
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                            centerPadding: '20px',
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            centerMode: false,
-                            centerPadding: '0px',
-                        }
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        centerPadding: '30px',
                     }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        centerPadding: '20px',
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: false,
+                        centerPadding: '0px',
+                    }
+                }
                 ]
             });
         });
