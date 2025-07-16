@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Zone</title>
+    <!-- Three .js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <!-- Slick CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
@@ -32,9 +35,9 @@
         </div>
 
         <nav id="mainNav" class="mobile-nav">
-            <a href="#">HOME</a>
-            <a href="#">CAFE</a>
-            <a href="#">GAME ZONE</a>
+            <a href="./index.html">HOME</a>
+            <a href="">CAFE</a>
+            <a href="./game-zone.html">GAME ZONE</a>
             <a href="#">MOVIE</a>
             <a href="#">EVENT & PARTIES</a>
             <a href="#">CONTACT</a>
@@ -192,6 +195,81 @@
         </div>
 
     </section>
+    <!-- CAFE VIBED -->
+    <section class="cafe-vibes-section">
+        <!-- Decorative Curves -->
+        <img src="assets/images/left-slash.png" alt="Decor" class="decor-top-left" />
+        <img src="assets/images/right-slash.png" alt="Decor" class="decor-bottom-right" />
+
+        <!-- Image Cards -->
+        <div class="cafe-image-row">
+            <div class="cafe-img img-1">
+                <img src="assets/images/game-cafe1.png" alt="Cafe 1" />
+            </div>
+            <div class="cafe-img img-2">
+                <img src="assets/images/game-cafe2.png" alt="Cafe 2" />
+            </div>
+            <div class="cafe-img img-3">
+                <img src="assets/images/game-cafe3.png" alt="Cafe 3" />
+            </div>
+        </div>
+
+        <!-- Headline -->
+        <h2 class="cafe-heading">SIP. CHILL. CONNECT.</h2>
+
+        <!-- Description -->
+        <div class="cafe-about">
+            <h4>About Café</h4>
+            <p>
+                At East Hug Café, Every Cup Comes With A Dash Of Good Vibes. We Blend Cozy Interiors, Upbeat Music,
+                And Delicious Bites To Keep Your Spirits High. From Coffee Dates To Gaming Breaks, This Is Your Go-To
+                Chill Spot.
+                Come Sip, Relax, And Create Moments Worth Sharing.
+            </p>
+        </div>
+    </section>
+
+    <!-- CAFE AMBIENCE SECTION -->
+    <section class="cafe-vibes-ambiance">
+         <canvas id="cafeCanvas"></canvas>
+        <!-- Heading -->
+        <h2 class="ambience-heading">CAFE AMBIENCE</h2>
+
+        <!-- Carousel -->
+        <div class="gamezone-carousel">
+            <!-- Card 1 -->
+            <div class="ambience-card">
+                <img src="assets/images/ambiance-img1.png" alt="Cafe 1" />
+            </div>
+            <!-- Card 2 -->
+            <div class="ambience-card">
+                <img src="assets/images/ambiance-img2.png" alt="Cafe 2" />
+            </div>
+            <!-- Card 3 -->
+            <div class="ambience-card">
+                <img src="assets/images/ambiance-img3.png" alt="Cafe 3" />
+            </div>
+            <!-- Card 1 -->
+            <div class="ambience-card">
+                <img src="assets/images/ambiance-img1.png" alt="Cafe 1" />
+            </div>
+            <!-- Card 2 -->
+            <div class="ambience-card">
+                <img src="assets/images/ambiance-img2.png" alt="Cafe 2" />
+            </div>
+            <!-- Card 3 -->
+            <div class="ambience-card">
+                <img src="assets/images/ambiance-img3.png" alt="Cafe 3" />
+            </div>
+            <!-- Add more cards if needed -->
+        </div>
+
+        <!-- Reserve Button -->
+        <div class="ambience-reserve-btn">
+            <a href="#" class="reserve-now">RESERVE NOW</a>
+        </div>
+    </section>
+
     <!-- OFFER SECTION -->
     <section class="membership-offer-section" data-aos="fade-up" data-aos-duration="1200">
         <div class="membership-container">
@@ -257,6 +335,7 @@
         </div>
         <img src="assets/images/white-diamond.png" alt="Right Icon" class="triangle-icon right" />
     </section>
+
     <!-- Footer -->
     <footer class="east-hug-footer">
         <!-- Top Purple Bar -->
@@ -318,6 +397,39 @@
     <!-- Slick Carousel JS (include these at the end of your body) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.gamezone-carousel').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: false,
+                centerPadding: '0px',
+                arrows: true,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            centerMode: true,
+                            centerPadding: '30px',
+                            arrows: true,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            centerMode: false,
+                            centerPadding: '0px',
+                            arrows: false
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
     <!-- AOS Animation JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
@@ -353,6 +465,9 @@
             parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
         });
     </script>
+    <script type="module" src="./assets/JS-animations/JS-animations/about-section-animation.js"></script>
+    <!-- header toggler navbar -->
+    <script src="./assets/JS-animations/JS-animations/Header.js"></script>
 </body>
 
 </html>
