@@ -228,10 +228,9 @@
             </p>
         </div>
     </section>
-
     <!-- CAFE AMBIENCE SECTION -->
     <section class="cafe-vibes-ambiance">
-         <canvas id="cafeCanvas"></canvas>
+        <canvas id="cafeCanvas"></canvas>
         <!-- Heading -->
         <h2 class="ambience-heading">CAFE AMBIENCE</h2>
 
@@ -269,7 +268,6 @@
             <a href="#" class="reserve-now">RESERVE NOW</a>
         </div>
     </section>
-
     <!-- OFFER SECTION -->
     <section class="membership-offer-section" data-aos="fade-up" data-aos-duration="1200">
         <div class="membership-container">
@@ -406,6 +404,8 @@
                 centerPadding: '0px',
                 arrows: true,
                 dots: true,
+                autoplay: true, // ✅ Correct key
+                autoplaySpeed: 3000, // 3 seconds between slides
                 responsive: [
                     {
                         breakpoint: 1024,
