@@ -71,8 +71,8 @@
     /* font-family: 'Segoe UI', sans-serif; */
     text-align: center;
     background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 2px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 2px);
     background-size: 100px 100px;
 }
 
@@ -238,189 +238,161 @@
 }
 
 /* ***************************************** Video styling ********************** */
-/* Wrapper */
-.slick-video-wrapper {
-    background: #0b0b0b;
-    padding: 2rem 1rem 3rem;
+.video-carousel-section {
+    background: transparent;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
     font-family: 'Segoe UI', sans-serif;
     color: white;
     position: relative;
 }
 
-/* Carousel container */
 .video-carousel {
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
 }
 
-/* Slide wrapper */
 .video-slide {
     position: relative;
     border-radius: 30px;
-    height: 60vh;
     overflow: hidden;
-    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); */
 }
 
 .video-slide img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 4/3;
-    object-fit: contain;
+    aspect-ratio: 16/9;
+    object-fit: cover;
     border-radius: 30px;
 }
 
-/* Overlay on video */
+/* Overlay play button */
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-/* Play button */
 .play-button .circle {
     width: 80px;
     height: 80px;
     border: 2px solid white;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     backdrop-filter: blur(2px);
 }
 
-.play-button .play-icon {
+.play-icon {
     font-size: 2rem;
     color: white;
-    margin-left: 4px;
 }
 
 .play-button p {
-    font-size: 0.95rem;
-    font-weight: 600;
     margin-top: 0.6rem;
-    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
     letter-spacing: 0.5px;
 }
 
-/* Bottom Controls */
-.slick-bottom-controls {
-    margin-top: 2rem;
-    max-width: 90%;
-    margin-inline: auto;
-}
-
-.controls-row {
+/* Controls */
+.carousel-controls {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 2rem auto 0;
     gap: 1rem;
 }
 
-/* Dot indicators */
-.dots-container {
-    flex: 1;
+.carousel-dots {
     text-align: left;
-}
-
-.slick-dots {
-    display: inline-block !important;
-    padding: 0;
-    margin: 0;
-}
-
-.slick-dots li {
-    display: inline-block;
-    margin: 0 4px;
 }
 
 .slick-dots li button:before {
     font-size: 12px;
-    color: #888;
+    color: #fff !important;
     opacity: 1;
+    text-align: left;
 }
 
 .slick-dots li.slick-active button:before {
-    color: #adff2f;
+    color: #D1FF16 !important;
 }
 
-/* Reserve Now Button */
-.reserve-btn {
+.carousel-btn {
     padding: 0.6rem 1.8rem;
     background: linear-gradient(90deg, #4700ff, #c700ff);
     color: white;
-    border: none;
     border-radius: 30px;
     font-weight: bold;
     text-decoration: none;
     font-size: 0.95rem;
     box-shadow: 0 0 12px rgba(199, 0, 255, 0.4);
-    transition: all 0.3s ease;
-    white-space: nowrap;
+
 }
 
-.reserve-btn:hover {
+.carousel-btn:hover {
     background: linear-gradient(90deg, #3500cc, #a000cc);
-    box-shadow: 0 0 15px rgba(199, 0, 255, 0.6);
 }
 
-/* Navigation Arrows */
-.slick-arrows {
+/* Arrows */
+.carousel-arrows {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    gap: 0.5rem;
 }
 
-.slick-arrows button {
+.carousel-arrows button {
+    width: 42px;
+    height: 36px;
     background: transparent;
     border: 2px solid #999;
-    color: #fff;
     border-radius: 20px;
-    width: 48px;
-    height: 34px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: all 0.3s;
+    color: white;
+    font-size: 1.2rem;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
-.slick-arrows .custom-prev {
+.carousel-arrows .custom-prev {
     border-color: #adff2f;
 }
 
-.slick-arrows .custom-next {
+.carousel-arrows .custom-next {
     border-color: #ffffff;
 }
 
-.slick-arrows button:hover {
+.carousel-arrows button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: #fff600;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-    .controls-row {
+@media (max-width: 768px) {
+    .carousel-controls {
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
         text-align: center;
     }
 
-    .dots-container {
+    .carousel-dots {
         text-align: center;
     }
 
-    .slick-dots {
-        width: 0;
+    .video-slide {
+        border-radius: 20px;
+    }
+
+    .carousel-btn {
+        font-size: 0.85rem;
     }
 }
+
 
 /* ************************************ CAFE VIBES ***************************** */
 /* ===== Cafe Vibes Section ===== */

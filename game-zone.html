@@ -143,8 +143,8 @@
                 </div>
             </div>
         </div>
-        <!-- Video Carousel Section -->
-        <div class="slick-video-wrapper">
+        <!-- VIDEO CAROUSEL SECTION -->
+        <section class="video-carousel-section">
             <div class="video-carousel">
                 <!-- Slide 1 -->
                 <div class="video-slide">
@@ -181,18 +181,16 @@
             </div>
 
             <!-- Bottom Controls -->
-            <div class="slick-bottom-controls">
-                <div class="controls-row">
-                    <div class="dots-container"></div>
-                    <a href="#" class="reserve-btn">RESERVE NOW</a>
-                </div>
-
-                <div class="slick-arrows">
-                    <button class="slick-prev custom-prev"><span>←</span></button>
-                    <button class="slick-next custom-next"><span>→</span></button>
+            <div class="carousel-controls">
+                <div class="carousel-dots"></div>
+                <a href="#" class="carousel-btn">RESERVE NOW</a>
+                <div class="carousel-arrows">
+                    <button class="custom-prev"><span>&larr;</span></button>
+                    <button class="custom-next"><span>&rarr;</span></button>
                 </div>
             </div>
-        </div>
+        </section>
+
 
     </section>
     <!-- CAFE VIBED -->
@@ -399,7 +397,7 @@
         $(document).ready(function () {
             $('.gamezone-carousel').slick({
                 slidesToShow: 3,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
                 centerMode: false,
                 centerPadding: '0px',
                 arrows: true,
@@ -438,10 +436,10 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: true,
-                dots: true,
+                dots: false,
                 infinite: true,
                 centerMode: false,
-                appendDots: $('.dots-container'),
+                appendDots: $('.carousel-dots'),
                 prevArrow: $('.custom-prev'),
                 nextArrow: $('.custom-next'),
                 responsive: [{

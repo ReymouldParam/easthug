@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>Events & Parties</title>
+    <!-- Three .js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- global css -->
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <!-- Home css -->
+    <link rel="stylesheet" href="./assets/css/events.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="assets/images/website-logo.svg" alt="Logo" />
+            </div>
+            <button id="navToggle" class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav id="mainNav" class="mobile-nav">
+            <a href="./index.html">HOME</a>
+            <a href="">CAFE</a>
+            <a href="./game-zone.html">GAME ZONE</a>
+            <a href="#">MOVIE</a>
+            <a href="#">EVENT & PARTIES</a>
+            <a href="#">CONTACT</a>
+            <button class="btn-reserve">RESERVE NOW</button>
+        </nav>
+    </header>
+    <!-- Section 1 -->
+    <section class="gamezone-hero parallax-bg" data-aos="fade-up" data-aos-duration="1200"></section>
+    <!-- About Party Hall Section -->
+    <section class="gamezone-about-section" data-aos="fade-up" data-aos-duration="1200">
+        <div class="about-text">
+            <h2>About Party Hall</h2>
+            <p>
+                Step into East Hug’s Game Zone — Where Every Game Is A New Adventure!<br />
+                Rack up wins in our indoor arena with snooker, thrilling VR experiences, and PS5 battles. Take the
+                fun
+                outdoors with box cricket and football matches. Or serve up excitement on our exclusive pickleball
+                court.
+            </p>
+        </div>
+        <!-- Indoor Games -->
+        <div class="game-grid">
+            <!-- Snooker -->
+            <div class="game-card">
+                <img src="assets/images/snooker.png" alt="Snooker" />
+                <div class="card-content">
+                    <h3>Snooker</h3>
+                    <p>Classic precision, focused fun – your shot at victory starts here.</p>
+                    <div class="card-footer">
+                        <span class="availability">Check Availability <span class="check-arrow">→</span></span>
+                        <a href="#" class="play-btn">Reserve Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PS5 Game -->
+            <div class="game-card">
+                <img src="assets/images/ps5-game.png" alt="PS5 Game" />
+                <div class="card-content">
+                    <h3>PS5 Game</h3>
+                    <p>Next-gen excitement – immersive visuals, rapid-fire challenges.</p>
+                    <div class="card-footer">
+                        <span class="availability">Check Availability <span class="arrow">→</span></span>
+                        <a href="#" class="play-btn">Reserve Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VR Game -->
+            <div class="game-card">
+                <img src="assets/images/vr-game.png" alt="VR Game" />
+                <div class="card-content">
+                    <h3>VR Game</h3>
+                    <p>Step into another reality – immersive, thrilling, unforgettable.</p>
+                    <div class="card-footer">
+                        <span class="availability">Check Availability <span class="arrow">→</span></span>
+                        <a href="#" class="play-btn">Reserve Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PARTY TYPES SECTION -->
+    <section class="party-types-section">
+        <div class="party-grid">
+
+            <!-- Card 1 -->
+            <div class="party-card">
+                <img src="assets/images/snooker.png" alt="Birthday Party" />
+                <h3>BIRTHDAY PARTY</h3>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="party-card">
+                <img src="assets/images/vr-game.png" alt="Gathering Party" />
+                <h3>GEATHERING PARTY</h3>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="party-card">
+                <img src="assets/images/vr-game.png" alt="Official Party" />
+                <h3>OFFICIAL PARTY</h3>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="party-card">
+                <img src="assets/images/box-cricket.png" alt="Small Party" />
+                <h3>SMALL PARTY</h3>
+            </div>
+        </div>
+
+        <div class="party-button">
+            <a href="#" class="btn-reserve">RESERVE NOW</a>
+        </div>
+    </section>
+
+
+</body>
+<!-- Slick Carousel JS (include these at the end of your body) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- AOS Animation JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.video-carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            infinite: true,
+            centerMode: false,
+            appendDots: $('.dots-container'),
+            prevArrow: $('.custom-prev'),
+            nextArrow: $('.custom-next'),
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+        // Initialize AOS
+        AOS.init({
+            once: true
+        });
+    });
+</script>
+<!-- Parallax JS for smooth effect -->
+<script>
+    window.addEventListener('scroll', function () {
+        const parallax = document.querySelector('.gamezone-hero');
+        let scrollPosition = window.pageYOffset;
+        parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+    });
+</script>
+<script type="module" src="./assets/JS-animations/JS-animations/about-section-animation.js"></script>
+<!-- header toggler navbar -->
+<script src="./assets/JS-animations/JS-animations/Header.js"></script>
+
+</html>

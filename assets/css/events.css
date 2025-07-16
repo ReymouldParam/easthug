@@ -1,0 +1,298 @@
+.parallax-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+    pointer-events: none;
+}
+
+.gamezone-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-image: url('../images/events-and-paties-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+    z-index: -1;
+}
+
+.gamezone-content {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    background: white;
+    overflow-x: hidden;
+}
+
+.parallax-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+    pointer-events: none;
+}
+
+/* ================= MOBILE VIEW FIX ================= */
+@media (max-width: 600px) {
+    .gamezone-hero {
+        position: relative;
+        /* allow it to scroll normally */
+        height: 40vh;
+        /* reduce height on mobile */
+        background-attachment: scroll;
+        /* disable parallax on mobile for performance */
+    }
+
+    .parallax-bg::after {
+        height: 10px;
+        /* smaller gradient fade on mobile */
+    }
+
+    .gamezone-content {
+        margin-top: 0;
+        /* remove auto top margin on mobile */
+    }
+}
+
+/*********************************************** Party  Hall section ****************/
+.gamezone-about-section {
+    background: #0c0c0c;
+    padding: 2rem 1rem;
+    color: #fff;
+    /* font-family: 'Segoe UI', sans-serif; */
+    text-align: center;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 100px 100px;
+}
+
+/* Add top margin to the about section so it starts after hero */
+.gamezone-about-section {
+    margin-top: 65vh;
+    position: relative;
+    z-index: 2;
+}
+
+/* About text */
+.about-text {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Section heading */
+.section-heading {
+    font-size: 2rem;
+    margin: 3rem 0 2rem;
+    color: #D1FF16;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Game Grid */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Game Card */
+.game-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid #adff2f;
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Card content */
+.card-content {
+    padding: 1.2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Card footer with availability and button */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.availability {
+    color: #777;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.availability .arrow {
+    margin-left: 4px;
+    font-size: 1rem;
+    transition: margin-left 0.2s ease;
+}
+
+.availability:hover .arrow {
+    margin-left: 8px;
+}
+
+/* Play button */
+.play-btn {
+    background-color: #6a0dad;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #5500b8;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .play-btn {
+        font-size: 0.85rem;
+    }
+
+    .availability {
+        font-size: 0.85rem;
+    }
+}
+
+/* ********************************** Party hall Section  *****************/
+.party-types-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    /* solid white base */
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 2px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 2px);
+    background-size: 100px 100px;
+    text-align: center;
+}
+
+.party-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.party-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.party-card img {
+    width: 100%;
+    max-width: 350px;
+    /* border: 3px solid #D1FF16; */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.party-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #7800e2;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.party-button {
+    text-align: center;
+}
+
+.btn-reserve {
+    background-color: #7800e2;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reserve:hover {
+    background-color: #5700a8;
+}
