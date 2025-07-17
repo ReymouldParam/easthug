@@ -1,0 +1,542 @@
+.parallax-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+    pointer-events: none;
+}
+
+.gamezone-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-image: url('../images/game-zone-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.gamezone-content {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    background: white;
+    overflow-x: hidden;
+}
+
+.parallax-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+    pointer-events: none;
+}
+
+/* ================= MOBILE VIEW FIX ================= */
+@media (max-width: 600px) {
+    .gamezone-hero {
+        position: relative;
+        /* allow it to scroll normally */
+        height: 40vh;
+        /* reduce height on mobile */
+        background-attachment: scroll;
+        /* disable parallax on mobile for performance */
+    }
+
+    .parallax-bg::after {
+        height: 10px;
+        /* smaller gradient fade on mobile */
+    }
+
+    .gamezone-content {
+        margin-top: 0;
+        /* remove auto top margin on mobile */
+    }
+}
+
+/* ******************************************************About us Section */
+/* SECTION WRAPPER ------------------------------------------------ */
+.about-section {
+    position: relative;
+    padding: 140px 5% 160px;
+    background: #000;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.07) 3px, transparent 3px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 3px, transparent 3px);
+    background-size: 100px 100px;
+    margin-top: 70vh;
+}
+
+/* max width container */
+.about-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ROWS ----------------------------------------------------------- */
+.about-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20%;
+    margin-bottom: 40px;
+}
+
+.about-row:last-child {
+    margin-bottom: 0;
+}
+
+/* reverse row order */
+.about-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* COLUMNS -------------------------------------------------------- */
+.about-col {
+    flex: 1 1 0;
+}
+
+/* lock text column narrower than image column for stronger layout */
+.about-col-text {
+    max-width: 420px;
+}
+
+.about-row.reverse .about-col-text {
+    text-align: left;
+    /* still left aligned even when row reversed */
+}
+
+.about-col-text h2,
+.about-col-text h3 {
+    margin: 0 0 8px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.about-col-text h2 {
+    font-size: 32px;
+}
+
+.about-col-text h3 {
+    font-size: 32px;
+}
+
+.about-col-text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 100%;
+}
+
+/* swoosh line */
+.about-swoosh {
+    width: 170px;
+    height: 12px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* IMAGE COL ------------------------------------------------------ */
+.about-col-img {
+    max-width: 350px;
+    position: relative;
+}
+
+.about-col-img img {
+    width: 100%;
+    /* display: block; */
+    border-radius: 8px;
+    /* border: 4px solid #c6ff00; */
+    /* background:none !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 0 20px rgba(198, 255, 0, 0.35); */
+}
+
+/* tilt directions */
+.rotate-pos img {
+    transform: rotate(4deg);
+}
+
+.rotate-neg img {
+    transform: rotate(-4deg);
+}
+
+/* outward pushes (simulate screenshot spacing near edges) */
+.push-right {
+    margin-right: -40px;
+}
+
+.push-left {
+    margin-left: -40px;
+}
+
+/* hover lift */
+.about-col-img img:hover {
+    transform: scale(1.03) rotate(0deg);
+    box-shadow: 0 0 32px rgba(198, 255, 0, 0.55);
+}
+
+/* FLOATING ARROWS ------------------------------------------------ */
+.about-arrow {
+    position: absolute;
+    width: 180px;
+    max-width: 15vw;
+    animation: about-arrow-float 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.about-arrow--tl {
+    top: 0;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.about-arrow--tr {
+    top: 12%;
+    right: 10%;
+    animation-delay: 1s;
+    transform: rotate(90deg);
+}
+
+.about-arrow--bl {
+    bottom: 26%;
+    left: 12%;
+    animation-delay: 2s;
+    transform: rotate(-90deg);
+}
+
+.about-arrow--br {
+    bottom: -10px;
+    right: 6%;
+    animation-delay: 3s;
+    transform: rotate(180deg);
+}
+
+@keyframes about-arrow-float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1) rotate(var(--rot, 0deg));
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-40px) scale(1.02) rotate(calc(var(--rot, 8deg) + 10deg));
+        opacity: 0.9;
+    }
+}
+
+/* Because we used transform directly in the arrow modifiers above, animation will override.
+   If you want smoother rotation retention: remove transforms in arrow modifiers
+   & instead set custom property values inline or adjust keyframes per class.
+*/
+
+/* RESPONSIVE ---------------------------------------------------- */
+@media (max-width: 1200px) {
+    .about-row {
+        gap: 60px;
+    }
+
+    .about-col-text {
+        max-width: 380px;
+    }
+
+    .about-col-img {
+        max-width: 280px;
+    }
+
+    .push-right {
+        margin-right: -20px;
+    }
+
+    .push-left {
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .about-row,
+    .about-row.reverse {
+        flex-direction: column;
+        /* stack */
+        gap: 32px;
+        margin-bottom: 72px;
+        text-align: center;
+    }
+
+    .about-col-text {
+        max-width: 600px;
+    }
+
+    .about-col-text p {
+        max-width: 100%;
+    }
+
+    .about-col-img {
+        max-width: 240px;
+        margin: 0 !important;
+        /* remove pushes */
+    }
+
+    .about-col-img img {
+        transform: rotate(0deg);
+    }
+
+    /* flatten tilt for small screens */
+    .about-arrow {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 100px 1.5rem 120px;
+    }
+
+    .about-row {
+        margin-bottom: 56px;
+    }
+
+    .about-col-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-col-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-col-img {
+        max-width: 220px;
+    }
+
+    .about-arrow {
+        width: 40px;
+    }
+}
+
+/* ************************ What about section  */
+/* Section wrapper */
+.why-east-hug {
+    text-align: center;
+    padding: 25px 1%;
+    position: relative;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Title */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #7800E2;
+    /* purple gradient look */
+    margin-bottom: 60px;
+}
+
+/* Decorative floating shape */
+.decor-shape {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 150px;
+    animation: floatShape 5s ease-in-out infinite;
+}
+
+@keyframes floatShape {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(8deg);
+    }
+
+    50% {
+        transform: translateY(-40%) rotate(-10deg);
+    }
+}
+
+/* Cards container */
+.why-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Each card */
+.why-card {
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Icon circle */
+.why-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    background: #8b4eff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-icon img {
+    width: 60px;
+    height: auto;
+}
+
+/* Card Title */
+.why-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Bullet list */
+.why-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-card ul li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.why-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .why-cards {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .why-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* ********************************** Location section ***********/
+.mochaplay-location-section {
+    background:#000;
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    padding: 60px 60px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    animation: diagonalGradient 12s ease-in-out infinite;
+    perspective: 1000px;
+}
+
+
+.location-subheading {
+    color: #8b34ff;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.location-heading {
+    font-size: 64px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.location-heading .highlight {
+    color: #d6ff3c;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+}
+
+.highlight-underline {
+    width: 250px;
+    height: 4px;
+    background-color: #d6ff3c;
+    margin: 20px auto 0;
+}
+
+/* Diamond Arrows */
+.triangle-icon {
+    position: absolute;
+    top: 30%;
+    width: 250px;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+/* Left diamond animation */
+.triangle-icon.left {
+    left: 30px;
+    animation: moveLeftDiamond 6s ease-in-out infinite alternate;
+}
+
+/* Right diamond animation */
+.triangle-icon.right {
+    right: 30px;
+    animation: moveRightDiamond 6s ease-in-out infinite alternate;
+    transform: scaleX(-1);
+    /* Mirror the right one */
+}
+
+/* Keyframes */
+@keyframes moveLeftDiamond {
+    0% {
+        left: 30px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        left: calc(100% - 150px);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes moveRightDiamond {
+    0% {
+        right: 30px;
+        transform: scaleX(-1) rotate(0deg);
+    }
+
+    100% {
+        right: calc(100% - 150px);
+        transform: scaleX(-1) rotate(-180deg);
+    }
+}
