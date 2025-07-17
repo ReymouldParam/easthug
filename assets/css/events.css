@@ -282,11 +282,11 @@
     text-align: center;
 }
 
-.btn-reserve {
+.btn-reserve-carousel {
     background-color: #7800e2;
     color: #fff;
     padding: 12px 30px;
-    border-radius: 20px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
@@ -295,4 +295,343 @@
 
 .btn-reserve:hover {
     background-color: #5700a8;
+}
+
+/******************************************************** VIDEO CAROUSEL SECTION ********************************* */
+
+.video-carousel-background {
+    background: #0c0c0c;
+    padding: 2rem 1rem;
+    color: #fff;
+    text-align: center;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 2px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 2px);
+    background-size: 100px 100px;
+}
+
+.video-carousel-section {
+    background: transparent;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    /* font-family: 'Segoe UI', sans-serif; */
+    color: white;
+    position: relative;
+}
+
+.video-carousel {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.video-slide {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.video-slide img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Overlay play button */
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.play-button .circle {
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.play-icon {
+    font-size: 2rem;
+    color: white;
+}
+
+.play-button p {
+    margin-top: 0.6rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Controls */
+.carousel-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    gap: 1rem;
+}
+
+.carousel-dots {
+    text-align: left;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #fff !important;
+    opacity: 1;
+    text-align: left;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #D1FF16 !important;
+}
+
+.carousel-btn {
+    padding: 0.6rem 1.8rem;
+    background: linear-gradient(90deg, #4700ff, #c700ff);
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+    box-shadow: 0 0 12px rgba(199, 0, 255, 0.4);
+
+}
+
+.carousel-btn:hover {
+    background: linear-gradient(90deg, #3500cc, #a000cc);
+}
+
+/* Arrows */
+.carousel-arrows {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.carousel-arrows button {
+    width: 42px;
+    height: 36px;
+    background: transparent;
+    border: 2px solid #999;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.carousel-arrows .custom-prev {
+    border-color: #adff2f;
+}
+
+.carousel-arrows .custom-next {
+    border-color: #ffffff;
+}
+
+.carousel-arrows button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-controls {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carousel-dots {
+        text-align: center;
+    }
+
+    .video-slide {
+        border-radius: 20px;
+    }
+
+    .carousel-btn {
+        font-size: 0.85rem;
+    }
+}
+
+/* ***************************** Member Offer Section ***********************************/
+/* Membership Section */
+.membership-section {
+    background-color: #1c1c1c;
+    /* Dark Background */
+    padding: 3rem 5%;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.membership-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Left Content */
+.membership-content {
+    flex: 1;
+    min-width: 300px;
+    color: #fff;
+}
+
+.membership-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #3a00ff, #6b00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-light {
+    color: #8c30ff;
+}
+
+.membership-subtitle {
+    font-size: 1.2rem;
+    color: #d6ff00;
+    margin-bottom: 2rem;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.membership-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+
+.gradient-btn {
+    background: linear-gradient(90deg, #3a00ff, #a800ff);
+    transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+    background: linear-gradient(90deg, #a800ff, #3a00ff);
+}
+
+/* Right Image */
+.membership-image img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ********************************** Location section ***********/
+.mochaplay-location-section {
+    background: linear-gradient(135deg, #D1FF16 0%, #000000 40%, #7800E2 100%);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    padding: 40px 60px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    animation: diagonalGradient 12s ease-in-out infinite;
+    perspective: 1000px;
+}
+
+
+.location-subheading {
+    color: #8b34ff;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.location-heading {
+    font-size: 64px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.location-heading .highlight {
+    color: #d6ff3c;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+}
+
+.highlight-underline {
+    width: 250px;
+    height: 4px;
+    background-color: #d6ff3c;
+    margin: 20px auto 0;
+}
+
+/* Diamond Arrows */
+.triangle-icon {
+    position: absolute;
+    top: 30%;
+    width: 250px;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+/* Left diamond animation */
+.triangle-icon.left {
+    left: 30px;
+    animation: moveLeftDiamond 6s ease-in-out infinite alternate;
+}
+
+/* Right diamond animation */
+.triangle-icon.right {
+    right: 30px;
+    animation: moveRightDiamond 6s ease-in-out infinite alternate;
+    transform: scaleX(-1);
+    /* Mirror the right one */
+}
+
+/* Keyframes */
+@keyframes moveLeftDiamond {
+    0% {
+        left: 30px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        left: calc(100% - 150px);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes moveRightDiamond {
+    0% {
+        right: 30px;
+        transform: scaleX(-1) rotate(0deg);
+    }
+
+    100% {
+        right: calc(100% - 150px);
+        transform: scaleX(-1) rotate(-180deg);
+    }
 }

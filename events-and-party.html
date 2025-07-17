@@ -33,10 +33,9 @@
 
         <nav id="mainNav" class="mobile-nav">
             <a href="./index.html">HOME</a>
-            <a href="">CAFE</a>
+            <a href="./index.html">ABOUT US</a>
             <a href="./game-zone.html">GAME ZONE</a>
-            <a href="#">MOVIE</a>
-            <a href="#">EVENT & PARTIES</a>
+            <a href="./events-and-party.html">EVENT & PARTIES</a>
             <a href="#">CONTACT</a>
             <button class="btn-reserve">RESERVE NOW</button>
         </nav>
@@ -127,52 +126,192 @@
         </div>
 
         <div class="party-button">
-            <a href="#" class="btn-reserve">RESERVE NOW</a>
+            <a href="#" class="btn-reserve-carousel">RESERVE NOW</a>
         </div>
     </section>
+    <!-- cAROUSEL SECTION -->
+    <section class="video-carousel-background">
+        <div class="video-carousel">
+            <!-- Slide 1 -->
+            <div class="video-slide">
+                <img src="assets/images/party-hall.png" alt="Party Hall" />
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <div class="circle"><span class="play-icon">▶</span></div>
+                        <p>START TO PLAY</p>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Slide 2 -->
+            <div class="video-slide">
+                <img src="assets/images/party-img1.png" alt="Party 1" />
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <div class="circle"><span class="play-icon">▶</span></div>
+                        <p>START TO PLAY</p>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Slide 3 -->
+            <div class="video-slide">
+                <img src="assets/images/cheering-img.png" alt="Cheering" />
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <div class="circle"><span class="play-icon">▶</span></div>
+                        <p>START TO PLAY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Controls -->
+        <div class="carousel-controls">
+            <div class="carousel-dots"></div>
+            <a href="#" class="carousel-btn">RESERVE NOW</a>
+            <div class="carousel-arrows">
+                <button class="custom-prev"><span>&larr;</span></button>
+                <button class="custom-next"><span>&rarr;</span></button>
+            </div>
+        </div>
+    </section>
+    <!-- Membership Offer Section -->
+    <section class="membership-section">
+        <div class="membership-container">
+            <!-- Left Content -->
+            <div class="membership-content">
+                <h1 class="membership-title">
+                    <span class="gradient-text">Membership</span> <span class="gradient-text-light">Offer</span>
+                </h1>
+                <p class="membership-subtitle">
+                    A One-Stop Destination Where Thrill Meets Chill — From The Big Screen To Bite-Sized Treats And
+                    Gaming Heat.
+                </p>
+                <div class="membership-buttons">
+                    <button class="btn gradient-btn">ADD MEMBERSHIP</button>
+                    <button class="btn gradient-btn">RESERVE NOW</button>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="membership-image">
+                <img src="assets/images/event-offer-img.png" alt="Membership Offer">
+            </div>
+        </div>
+    </section>
+    <!-- LOCATION SECTIONS -->
+    <section class="mochaplay-location-section" data-aos="fade-up" data-aos-duration="1200">
+        <img src="assets/images/white-diamond.png" alt="Left Icon" class="triangle-icon left" />
+        <div class="location-content">
+            <h4 class="location-subheading">Closer than you think</h4>
+            <h2 class="location-heading">
+                Mochaplay are located<br>
+                near Hyderabad with easy<br>
+                <span class="highlight">access by road.</span>
+            </h2>
+            <div class="highlight-underline"></div>
+        </div>
+        <img src="assets/images/white-diamond.png" alt="Right Icon" class="triangle-icon right" />
+    </section>
+    <!-- Footer -->
+    <footer class="east-hug-footer">
+        <!-- Top Purple Bar -->
+        <div class="footer-top-border"></div>
+
+        <!-- Logo with Side Purple Bars -->
+        <div class="footer-logo-bar">
+            <div class="side-line"></div>
+            <div class="logo-container">
+                <img src="assets/images/website-logo.svg" alt="East Hug Logo" />
+            </div>
+            <div class="side-line"></div>
+        </div>
+
+        <!-- Main Grid Content -->
+        <div class="footer-main-grid">
+            <!-- Column 1: Location -->
+            <div class="footer-cell cell-border">
+                <div class="footer-item">
+                    <img src="assets/images/location-logo.svg" alt="Location Icon" />
+                    <p>XYZ</p>
+                </div>
+            </div>
+
+            <!-- Column 2: Email, Divider, Phone -->
+            <div class="footer-cell cell-border">
+                <div class="footer-item">
+                    <img src="assets/images/mail-logo.svg" alt="Mail Icon" />
+                    <p>XYZ@Gmail.Com</p>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-item">
+                    <img src="assets/images/call-logo.svg" alt="Phone Icon" />
+                    <p>+385 20 300 300 | +385 20 300 300</p>
+                </div>
+            </div>
+
+            <!-- Column 3: Subscribe, Divider, Social -->
+            <div class="footer-cell">
+                <div class="subscribe-row">
+                    <input type="email" placeholder="name@gmail.com" />
+                    <button class="subscribe-btn">SUBSCRIPTION</button>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-social-icons">
+                    <img src="assets/images/facebook.png" alt="Facebook" />
+                    <img src="assets/images/instagram.png" alt="Instagram" />
+                    <img src="assets/images/twitter.png" alt="Twitter" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+            <p class="left">Mochaplay@2025 All Rights Reserved</p>
+            <p class="right">Design & Development by Reymould</p>
+        </div>
+    </footer>
+    <!-- Slick Carousel JS (include these at the end of your body) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.video-carousel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                centerMode: false,
+                appendDots: $('.carousel-dots'),
+                prevArrow: $('.custom-prev'),
+                nextArrow: $('.custom-next'),
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+            // Initialize AOS
+            AOS.init({
+                once: true
+            });
+        });
+    </script>
+    <!-- Parallax JS for smooth effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const parallax = document.querySelector('.gamezone-hero');
+            let scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+        });
+    </script>
+    <script type="module" src="./assets/JS-animations/JS-animations/about-section-animation.js"></script>
+    <!-- header toggler navbar -->
+    <script src="./assets/JS-animations/JS-animations/Header.js"></script>
 </body>
-<!-- Slick Carousel JS (include these at the end of your body) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<!-- AOS Animation JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.video-carousel').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true,
-            infinite: true,
-            centerMode: false,
-            appendDots: $('.dots-container'),
-            prevArrow: $('.custom-prev'),
-            nextArrow: $('.custom-next'),
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            }]
-        });
-        // Initialize AOS
-        AOS.init({
-            once: true
-        });
-    });
-</script>
-<!-- Parallax JS for smooth effect -->
-<script>
-    window.addEventListener('scroll', function () {
-        const parallax = document.querySelector('.gamezone-hero');
-        let scrollPosition = window.pageYOffset;
-        parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-    });
-</script>
-<script type="module" src="./assets/JS-animations/JS-animations/about-section-animation.js"></script>
-<!-- header toggler navbar -->
-<script src="./assets/JS-animations/JS-animations/Header.js"></script>
 
 </html>

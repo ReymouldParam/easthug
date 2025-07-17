@@ -53,12 +53,17 @@ nav a {
 }
 
 .btn-reserve {
-    background: linear-gradient(to right, #8f00ff, #f0f);
+    background: linear-gradient(90deg, #3a00ff, #a800ff);
+    transition: all 0.3s ease;
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.btn-reserve:hover {
+    background: linear-gradient(90deg, #a800ff, #3a00ff);
 }
 
 
@@ -82,7 +87,7 @@ nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 100;
 }
 
 .btn-reserve {
@@ -248,8 +253,8 @@ nav a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100vw;
-    border-top: 1px solid #D1FF16;
-    border-bottom: 1px solid #D1FF16;
+    /* border-top: 1px solid #D1FF16;
+    border-bottom: 1px solid #D1FF16; */
     margin: 0;
 }
 
