@@ -82,6 +82,14 @@
     z-index: 2;
 }
 
+@media (max-width: 768px) {
+    .gamezone-about-section {
+        margin-top: 0;
+
+    }
+
+}
+
 /* About text */
 .about-text {
     max-width: 900px;
@@ -500,6 +508,7 @@
     -webkit-text-fill-color: transparent;
 }
 
+
 .gradient-text-light {
     color: #8c30ff;
 }
@@ -511,6 +520,8 @@
     max-width: 550px;
     line-height: 1.6;
 }
+
+
 
 /* Buttons */
 .membership-buttons {
@@ -544,6 +555,16 @@
     border-radius: 10px;
 }
 
+@media (max-width: 600px) {
+    .membership-title {
+        font-size: 24px;
+    }
+
+    .membership-image img {
+        margin-top: 20px;
+    }
+
+}
 
 /* ********************************** Location section ***********/
 .mochaplay-location-section {
@@ -634,5 +655,21 @@
     100% {
         right: calc(100% - 150px);
         transform: scaleX(-1) rotate(-180deg);
+    }
+}
+
+
+/* =================== LOCATION SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+    .mochaplay-location-section {
+        padding: 10px 2vw;
+    }
+
+    .location-heading {
+        font-size: 1.1rem;
+    }
+
+    .triangle-icon {
+        width: 60px;
     }
 }

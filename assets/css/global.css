@@ -90,6 +90,26 @@ nav a {
     font-weight: 100;
 }
 
+nav a.active {
+    color: #D1FF16;
+    /* Neon Yellow */
+    font-weight: bold;
+    position: relative;
+}
+
+/* Add Game Icon */
+nav a.active::before {
+    content: "★";
+    position: absolute;
+    left:18px;
+    margin-top: -8px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #D1FF16;
+    text-align: center;
+}
+
+
 .btn-reserve {
     background: linear-gradient(to right, #8f00ff, #f0f);
     padding: 10px 20px;
@@ -353,125 +373,150 @@ nav a {
     border-top: 1px solid #D1FF16;
 }
 
-/* =================== FOOTER (Mobile) =================== */
+/* =================== NEW MOBILE FOOTER (current markup version) =================== */
 @media (max-width: 600px) {
+
+    /* Overall footer spacing */
     .east-hug-footer {
-        padding-top: 10px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         font-size: 14px;
-        background: #111;
-        color: #fff;
         overflow-x: hidden;
     }
 
-    .footer-top {
-        padding-bottom: 5px;
+    /* Top purple bar stays full width; keep as-is (no change needed) */
+
+    /* Logo bar: stack lines above/below logo so it doesn't overflow */
+    .footer-logo-bar {
+        flex-direction: column;
+        width: 100%;
+        border-top: 1px solid #D1FF16;
+        border-bottom: 1px solid #D1FF16;
+        padding: 12px 0;
+        gap: 8px;
+        display: none;
+    }
+
+    .footer-logo-bar .side-line {
+        width: 80%;
+        height: 6px;
+    }
+
+    .footer-logo-bar .logo-container {
+        padding: 0;
+    }
+
+    .footer-logo-bar .logo-container img {
+        height: 48px;
+        max-width: 80%;
+        height: auto;
+    }
+
+    /* Collapse 3‑col grid into a vertical stacked layout */
+    .footer-main-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        /* use container width, not 100vw (prevents sideways scroll) */
+        margin: 0 auto;
+        border: none;
+        /* remove stray lines from desktop grid */
+    }
+
+    .footer-cell {
+        width: auto;
+        max-width: 340px;
+        /* tighten width for nice reading */
+        margin: 0 auto;
+        padding: 24px 0;
+        gap: 16px;
+        border-right: none !important;
+        border-bottom: 1px solid #D1FF16;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-cell:last-child {
+        border-bottom: none;
+    }
+
+    /* Location / Email / Phone items */
+    .footer-item {
+        padding-left: 0;
         justify-content: center;
         text-align: center;
     }
 
-    .footer-logo img {
-        width: 100px;
-    }
-
-    .footer-main {
-        flex-direction: column;
-        padding: 20px 5vw;
-        gap: 20px;
-        margin: 0;
-    }
-
-    .footer-left,
-    .footer-right {
-        width: 100%;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .footer-block {
-        flex-direction: column;
-        gap: 8px;
-        display: flex;
-        align-items: center;
-    }
-
-    .footer-block img {
+    .footer-item img {
         width: 28px;
     }
 
-    .footer-block p {
-        font-size: 0.9rem;
+    .footer-item p {
+        font-size: 15px;
         line-height: 1.4;
         word-break: break-word;
     }
 
-    .footer-right h3 {
-        font-size: 1rem;
-        margin-bottom: 14px;
-        line-height: 1.4;
-        font-weight: 500;
+    /* Divider: shorten + reduce margin */
+    .footer-divider {
+        width: 60%;
+        margin: 8px auto;
+        height: 1px;
+        background-color: #D1FF16;
     }
 
-    .subscribe-box {
+    /* Subscribe row: stack input + button vertically, full width */
+    .subscribe-row {
         flex-direction: column;
         width: 100%;
-        max-width: 100%;
-        display: flex;
-        gap: 10px;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
     }
 
-    .subscribe-box input {
+    .subscribe-row input {
         width: 100%;
         padding: 14px 16px;
-        font-size: 1rem;
+        font-size: 15px;
+        border: 1px solid #D1FF16;
         border-radius: 6px;
-        border: none;
+        margin: 0;
         box-sizing: border-box;
     }
 
-    .subscribe-btn {
+    .subscribe-row .subscribe-btn {
         width: 100%;
+        margin-top: 10px;
         padding: 14px;
         font-size: 0.95rem;
-        background: linear-gradient(to right, #6200ff, #a22dff);
-        color: #fff;
-        font-weight: 600;
-        border: none;
         border-radius: 6px;
-        cursor: pointer;
-        text-transform: uppercase;
     }
 
-    .social-links p {
-        font-size: 1rem;
-        margin-top: 16px;
-    }
-
-    .social-links .icons {
-        display: flex;
+    /* Social icons: center & larger tap targets */
+    .footer-social-icons {
         justify-content: center;
-        gap: 16px;
-        margin-top: 10px;
-        flex-wrap: wrap;
+        margin: 12px auto 0;
+        gap: 24px;
     }
 
-    .social-links .icons img {
-        width: 32px;
-        height: 32px;
-        padding: 4px;
-        object-fit: contain;
+    .footer-social-icons img {
+        width: 36px;
+        height: 36px;
     }
 
-    .footer-bottom {
+    /* Bottom bar: stack lines */
+    .footer-bottom-bar {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        padding: 14px 5vw;
-        font-size: 0.85rem;
-        color: #aaa;
         gap: 6px;
+        padding: 16px 5vw;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom-bar .left,
+    .footer-bottom-bar .right {
+        margin: 0;
     }
 }

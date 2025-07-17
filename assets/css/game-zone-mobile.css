@@ -7,10 +7,10 @@
         font-size: 1rem;
     }
 
-    .gamezone-hero {
+    /* .gamezone-hero {
         height: 60vh;
         padding: 1rem;
-    }
+    } */
 
     .gamezone-about-section {
         margin-top: 0vh;
@@ -29,4 +29,114 @@
     }
 
     /* Add more mobile-specific styles as needed for other sections */
+}
+
+@media (max-width: 600px) {
+    .membership-offer-section {
+        padding: 30px 15px;
+        background: #f0f0f0;
+    }
+
+    .membership-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .membership-arrow {
+        display: none;
+    }
+
+    .membership-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .membership-subheading {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    .membership-heading {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .bold-text,
+    .light-text {
+        display: inline-block;
+    }
+
+    .membership-desc {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 10px 0 20px;
+        padding: 0 10px;
+    }
+
+    .membership-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+        max-width: 300px;
+    }
+
+    .membership-visuals {
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .offer-stack {
+        /* flex-direction: column; */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .offer-bar.stretched {
+        width: 200px;
+        height: 280px;
+        transform: translateX(-25px);
+    }
+
+    .offer-label {
+        font-size: 14px;
+        transform: translate(-50%, -50%);
+        left: 68%;
+        top: 28%;
+    }
+
+    .offer-label strong {
+        font-size: 1.8rem;
+    }
+
+    .snack-img {
+        width: 100px;
+        transform: translateX(-100%);
+    }
+
+    .curve-bg {
+        display: none;
+    }
+}
+
+/* =================== LOCATION SECTION (Mobile) =================== */
+@media (max-width: 600px) {
+    .mochaplay-location-section {
+        padding: 10px 2vw;
+    }
+
+    .location-heading {
+        font-size: 1.1rem;
+    }
+
+    .triangle-icon {
+        width: 60px;
+    }
 }

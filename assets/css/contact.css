@@ -100,6 +100,12 @@
     margin-top: 70vh;
 }
 
+@media (max-width: 600px) {
+    .contact-section {
+        margin-top: 0;
+    }
+}
+
 .contact-wrapper {
     display: flex;
     gap: 40px;
