@@ -56,7 +56,7 @@
                 <h2 class="section-title">Get in Touch</h2>
                 <p class="section-subtitle">We’d love to hear from you. Fill out the form below.</p>
 
-                <form id="contactForm">
+                <form id="contactForm" action="contact.php" method="POST">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
@@ -73,10 +73,11 @@
                         <div class="char-counter"><span id="charCount">0</span>/300</div>
                     </div>
 
-                    <!-- <div class="privacy-note">
-                        <input type="checkbox" id="privacy" required>
-                        <label for="privacy">I agree to the <a href="#">Privacy Policy</a></label>
-                    </div> -->
+                    <div class="privacy-note">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">I agree to the <a href="privacy.html" target="_blank">Privacy
+                                Policy</a></label>
+                    </div>
 
                     <button type="submit" class="btn primary-btn">Send Message</button>
                 </form>
@@ -163,6 +164,13 @@
             <i class="fa-brands fa-square-whatsapp"></i>
         </a>
     </footer>
+    <!-- Pop Up Heading -->
+    <!-- popup -->
+    <div id="popup-message" class="popup">
+        <h2 id="popup-heading" class="pop-up-heading"></h2>
+        <p id="popup-para" class="pop-up-para"></p>
+        <button id="close-popup" class="close-btn">Close</button>
+    </div>
     <!-- Slick Carousel JS (include these at the end of your body) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -179,6 +187,8 @@
     <script type="module" src="./assets/JS-animations/JS-animations/about-section-animation.js"></script>
     <!-- header toggler navbar -->
     <script src="./assets/JS-animations/JS-animations/Header.js"></script>
+    <!-- Email js -->
+    <script src="assets/JS-animations/JS-animations/email.js"></script>
 </body>
 
 </html>
